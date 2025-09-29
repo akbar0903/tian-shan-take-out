@@ -1,0 +1,18 @@
+server:
+  port: ${tian-shan.server.port}
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    druid:
+      driver-class-name: ${tian-shan.datasource.driver-class-name}
+      url: jdbc:mysql://${tian-shan.datasource.host}:${tian-shan.datasource.port}/${tian-shan.datasource.database}?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: ${tian-shan.datasource.username}
+      password: ${tian-shan.datasource.password}
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.akbar.entity
+  configuration:
+    map-underscore-to-camel-case: true
