@@ -12,4 +12,50 @@
     </parent>
 
     <artifactId>tian-shan-common</artifactId>
+
+    <dependencies>
+        <!--
+        核心以来：
+        spring-boot
+        带来了 Spring Core、Context、Beans、AOP 等最基础的 Spring 模块。
+        spring-boot-autoconfigure
+        自动配置机制（@EnableAutoConfiguration）的实现。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- JJWT 核心 API -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+        </dependency>
+
+        <!--
+        JJWT 实现
+        编译时不需要，运行时需要
+         -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--
+        JSON 解析依赖(比如解析Header 和 Payload等)
+        编译时不需要，运行时需要
+        -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--JSON 序列化与反序列化功能-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+    </dependencies>
 </project>

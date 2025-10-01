@@ -12,7 +12,17 @@ spring:
       password: ${tian-shan.datasource.password}
 
 mybatis-plus:
-  mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: com.akbar.entity
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+# jwt配置信息
+tian-shan:
+  jwt:
+    admin-secret-key: TIHGjrruCw2k6DAwcgbPRZvJvvwCwI4xYHZhgrErHs4=
+    admin-ttl: 7200000  # 2小时(7200000ms)
+    admin-token-name: token

@@ -5,15 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/JwtClaimsConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/PasswordConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/StatusConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/SystemConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/context/BaseContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/AccountLockedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/AccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/PasswordErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/json/JacksonObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/properties/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/EmployeeLoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/EmployeePageQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/EmployeeLoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/interceptor/JwtTokenAdminInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/EmployeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/TianShanApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/DishFlavor.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/DishFlavor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Setmeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Setmeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/SetmealDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/SetmealDish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +58,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -50,8 +89,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.TianShanApplicationTest.PasswordEncoderTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.generateRandomKeyTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.jwtTest.executor": "Debug",
+    "JUnit.TianShanApplicationTest.mybatisPlusPageTest.executor": "Run",
+    "Maven.tian-shan-server [clean].executor": "Run",
+    "Maven.tian-shan-server [install].executor": "Run",
     "Maven.tian-shan-take-out [clean].executor": "Run",
+    "Maven.tian-shan-take-out [compile].executor": "Run",
     "Maven.tian-shan-take-out [install].executor": "Run",
+    "Maven.tian-shan-take-out [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -66,11 +114,86 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.akbar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TianShanApplication">
+    <configuration name="TianShanApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TianShanApplicationTest.PasswordEncoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="METHOD_NAME" value="PasswordEncoderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TianShanApplicationTest.generateRandomKeyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="METHOD_NAME" value="generateRandomKeyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TianShanApplicationTest.jwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="METHOD_NAME" value="jwtTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TianShanApplicationTest.mybatisPlusPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="METHOD_NAME" value="mybatisPlusPageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TianShanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tian-shan-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.akbar.TianShanApplication" />
@@ -78,6 +201,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TianShanApplicationTest.jwtTest" />
+        <item itemvalue="JUnit.TianShanApplicationTest.mybatisPlusPageTest" />
+        <item itemvalue="JUnit.TianShanApplicationTest.PasswordEncoderTest" />
+        <item itemvalue="JUnit.TianShanApplicationTest.generateRandomKeyTest" />
+        <item itemvalue="JUnit.TianShanApplicationTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -97,11 +229,20 @@
       <workItem from="1751516126844" duration="374000" />
       <workItem from="1759122881709" duration="3377000" />
       <workItem from="1759126290571" duration="246000" />
-      <workItem from="1759126539202" duration="7070000" />
+      <workItem from="1759126539202" duration="17748000" />
+      <workItem from="1759203767640" duration="16275000" />
+      <workItem from="1759300072929" duration="4341000" />
+      <workItem from="1759304447413" duration="7733000" />
+      <workItem from="1759320671251" duration="6789000" />
+      <workItem from="1759327843726" duration="3174000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
