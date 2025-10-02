@@ -11,6 +11,7 @@ import com.akbar.result.Result;
 import com.akbar.service.EmployeeService;
 import com.akbar.utils.JwtUtil;
 import com.akbar.vo.EmployeeLoginVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -69,7 +70,10 @@ public class EmployeeController {
      */
     @PostMapping
     public Result<Void> save(@RequestBody EmployeeDTO employeeDTO) {
-        employeeService.save(employeeDTO);
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
+
+        employeeService.insert(employee);
         return Result.success();
     }
 
@@ -111,7 +115,10 @@ public class EmployeeController {
      */
     @PutMapping
     public Result<Void> update(@RequestBody EmployeeDTO employeeDTO) {
-        employeeService.updateById(employeeDTO);
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
+
+        employeeService.update(employee);
         return Result.success();
     }
 }

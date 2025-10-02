@@ -5,14 +5,13 @@ import com.akbar.dto.EmployeeLoginDTO;
 import com.akbar.dto.EmployeePageQueryDTO;
 import com.akbar.entity.Employee;
 import com.akbar.result.PageResult;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface EmployeeService extends IService<Employee> {
 
     Employee login(EmployeeLoginDTO employeeLoginDTO);
 
-    void save(EmployeeDTO employeeDTO);
+    void insert(Employee employee);
 
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
@@ -20,5 +19,5 @@ public interface EmployeeService extends IService<Employee> {
 
     Employee getById(Long id);
 
-    void updateById(EmployeeDTO employeeDTO);
+    void update(Employee employee);
 }

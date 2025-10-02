@@ -1,12 +1,13 @@
 package com.akbar.service.impl;
 
+import com.akbar.annotation.AutoFill;
 import com.akbar.constant.MessageConstant;
 import com.akbar.constant.PasswordConstant;
 import com.akbar.constant.StatusConstant;
-import com.akbar.dto.EmployeeDTO;
 import com.akbar.dto.EmployeeLoginDTO;
 import com.akbar.dto.EmployeePageQueryDTO;
 import com.akbar.entity.Employee;
+import com.akbar.enumeration.OperationType;
 import com.akbar.exception.AccountLockedException;
 import com.akbar.exception.AccountNotFoundException;
 import com.akbar.exception.PasswordErrorException;
@@ -17,11 +18,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.mindrot.jbcrypt.BCrypt;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> implements EmployeeService {
@@ -63,18 +61,15 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     /**
      * 新增员工
      */
+    @AutoFill(OperationType.INSERT)
     @Override
-    public void save(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
+    public void insert(Employee employee) {
 
-        // 对象属性拷贝
-        BeanUtils.copyProperties(employeeDTO, employee);
         // 设置帐号状态
         employee.setStatus(StatusConstant.ENABLE);
         // 设置初始密码
         employee.setPassword(BCrypt.hashpw(PasswordConstant.DEFAULT_PASSWORD, BCrypt.gensalt()));
 
-        // 保存员工
         employeeMapper.insert(employee);
     }
 
@@ -88,17 +83,11 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
         // 根据姓名模糊查询
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<Employee>()
-                // 如果姓名为空，则不进行模糊查询
-                .like(employeePageQueryDTO.getName() != null, Employee::getName, employeePageQueryDTO.getName());
-
+                .like(employeePageQueryDTO.getName() != null, Employee::getName, employeePageQueryDTO.getName())
+                .orderByDesc(Employee::getCreateTime);
         employeeMapper.selectPage(page, queryWrapper);
 
-        // 总记录数
-        long total = page.getTotal();
-        // 结果集
-        List<Employee> records = page.getRecords();
-
-        return new PageResult(total, records);
+        return new PageResult(page.getTotal(), page.getRecords());
     }
 
 
@@ -128,12 +117,10 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     /**
      * 更新员工信息
      */
+    @AutoFill(OperationType.UPDATE)
     @Override
-    public void updateById(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
-        // 对象属性拷贝
-        BeanUtils.copyProperties(employeeDTO, employee);
-        // 更新员工
+    public void update(Employee employee) {
+
         employeeMapper.updateById(employee);
     }
 }
