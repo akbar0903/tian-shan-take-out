@@ -1,13 +1,12 @@
 package com.akbar.service.impl;
 
-import com.akbar.annotation.AutoFill;
 import com.akbar.constant.MessageConstant;
 import com.akbar.constant.StatusConstant;
+import com.akbar.dto.CategoryDTO;
 import com.akbar.dto.CategoryPageQueryDTO;
 import com.akbar.entity.Category;
 import com.akbar.entity.Dish;
 import com.akbar.entity.Setmeal;
-import com.akbar.enumeration.OperationType;
 import com.akbar.exception.DeletionNotAllowedException;
 import com.akbar.mapper.CategoryMapper;
 import com.akbar.mapper.DishMapper;
@@ -17,6 +16,7 @@ import com.akbar.service.CategoryService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,9 +38,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     /**
      * 新增分类
      */
-    @AutoFill(OperationType.INSERT)
     @Override
-    public void insert(Category category) {
+    public void save(CategoryDTO categoryDto) {
+        Category category = new Category();
+        BeanUtils.copyProperties(categoryDto, category);
+
         // 默认状态为停用
         category.setStatus(StatusConstant.DISABLE);
 
@@ -107,9 +109,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     /**
      * 更新分类
      */
-    @AutoFill(OperationType.UPDATE)
     @Override
-    public void update(Category category) {
+    public void update(CategoryDTO categoryDTO) {
+
+        Category category = new Category();
+        BeanUtils.copyProperties(categoryDTO, category);
 
         categoryMapper.updateById(category);
     }

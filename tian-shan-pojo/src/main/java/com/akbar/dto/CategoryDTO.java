@@ -3,7 +3,7 @@ package com.akbar.dto;
 import lombok.Data;
 
 @Data
-public class CategoryDto {
+public class CategoryDTO {
 
     // 主键
     private Long id;

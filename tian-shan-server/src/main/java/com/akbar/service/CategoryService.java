@@ -1,6 +1,6 @@
 package com.akbar.service;
 
-import com.akbar.dto.CategoryDto;
+import com.akbar.dto.CategoryDTO;
 import com.akbar.dto.CategoryPageQueryDTO;
 import com.akbar.entity.Category;
 import com.akbar.result.PageResult;
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import java.util.List;
 
 public interface CategoryService extends IService<Category> {
-    void insert(Category category);
+    void save(CategoryDTO categoryDto);
 
     PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
 
@@ -17,7 +17,7 @@ public interface CategoryService extends IService<Category> {
 
     void startOrStop(Integer status, Long id);
 
-    void update(Category category);
+    void update(CategoryDTO categoryDto);
 
     List<Category> list(Integer type);
 }

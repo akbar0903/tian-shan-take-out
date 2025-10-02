@@ -11,7 +11,7 @@ public interface EmployeeService extends IService<Employee> {
 
     Employee login(EmployeeLoginDTO employeeLoginDTO);
 
-    void insert(Employee employee);
+    void save(EmployeeDTO employeeDTO);
 
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
@@ -19,5 +19,5 @@ public interface EmployeeService extends IService<Employee> {
 
     Employee getById(Long id);
 
-    void update(Employee employee);
+    void update(EmployeeDTO employeeDTO);
 }

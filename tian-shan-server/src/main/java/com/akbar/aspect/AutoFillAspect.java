@@ -15,6 +15,11 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 
+
+/**
+ * 自动填充已经由mybatis-plus的MetaObjectHandler实现，此处不再使用
+ */
+@Deprecated
 @Aspect
 @Component
 @Slf4j

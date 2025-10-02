@@ -1,13 +1,12 @@
 package com.akbar.service.impl;
 
-import com.akbar.annotation.AutoFill;
 import com.akbar.constant.MessageConstant;
 import com.akbar.constant.PasswordConstant;
 import com.akbar.constant.StatusConstant;
+import com.akbar.dto.EmployeeDTO;
 import com.akbar.dto.EmployeeLoginDTO;
 import com.akbar.dto.EmployeePageQueryDTO;
 import com.akbar.entity.Employee;
-import com.akbar.enumeration.OperationType;
 import com.akbar.exception.AccountLockedException;
 import com.akbar.exception.AccountNotFoundException;
 import com.akbar.exception.PasswordErrorException;
@@ -18,6 +17,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,9 +61,10 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     /**
      * 新增员工
      */
-    @AutoFill(OperationType.INSERT)
     @Override
-    public void insert(Employee employee) {
+    public void save(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
 
         // 设置帐号状态
         employee.setStatus(StatusConstant.ENABLE);
@@ -117,9 +118,10 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     /**
      * 更新员工信息
      */
-    @AutoFill(OperationType.UPDATE)
     @Override
-    public void update(Employee employee) {
+    public void update(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
 
         employeeMapper.updateById(employee);
     }
