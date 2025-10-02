@@ -20,6 +20,11 @@ mybatis-plus:
     db-config:
       id-type: auto
 
+# swagger(SpringDoc)配置信息
+springdoc:
+  api-docs:
+    enabled: true
+
 # jwt配置信息
 tian-shan:
   jwt:

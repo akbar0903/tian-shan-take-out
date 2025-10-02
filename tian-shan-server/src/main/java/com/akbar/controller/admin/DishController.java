@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/admin/dish")
 @Slf4j
@@ -35,5 +37,19 @@ public class DishController {
     public Result<PageResult> page(DishPageQueryDTO queryDTO) {
         PageResult pageResult = dishService.pageQuery(queryDTO);
         return Result.success(pageResult);
+    }
+
+
+    /**
+     * 删除菜品
+     * 前端传的是String字符串，比如1，2，3
+     * 通过@RequestParam("ids") List<Long> ids这种写法，Spring会自动将String字符串转换成List<Long>
+     */
+    @DeleteMapping()
+    public Result<Void> delete(@RequestParam("ids") List<Long> ids) {
+        log.info("要删除的id列表为： {}", ids);
+        dishService.deleteBatch(ids);
+
+        return Result.success();
     }
 }

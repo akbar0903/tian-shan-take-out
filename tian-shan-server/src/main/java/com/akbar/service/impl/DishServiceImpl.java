@@ -1,11 +1,16 @@
 package com.akbar.service.impl;
 
+import com.akbar.constant.MessageConstant;
+import com.akbar.constant.StatusConstant;
 import com.akbar.dto.DishDTO;
 import com.akbar.dto.DishPageQueryDTO;
 import com.akbar.entity.Dish;
 import com.akbar.entity.DishFlavor;
+import com.akbar.entity.SetmealDish;
+import com.akbar.exception.DeletionNotAllowedException;
 import com.akbar.mapper.DishFlavorMapper;
 import com.akbar.mapper.DishMapper;
+import com.akbar.mapper.SetmealDishMapper;
 import com.akbar.result.PageResult;
 import com.akbar.service.DishService;
 import com.akbar.vo.DishVO;
@@ -18,6 +23,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements DishService {
@@ -27,6 +33,9 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
 
     @Autowired
     private DishFlavorMapper dishFlavorMapper;
+
+    @Autowired
+    private SetmealDishMapper setmealDishMapper;
 
 
     /**
@@ -69,5 +78,33 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         );
 
         return new PageResult(result.getTotal(), result.getRecords());
+    }
+
+
+    /**
+     * 删除菜品
+     */
+    @Override
+    public void deleteBatch(List<Long> ids) {
+        // 如果是启售中，不能删
+        List<Dish> dishes = dishMapper.selectByIds(ids);
+        for (Dish dish : dishes) {
+            if (Objects.equals(dish.getStatus(), StatusConstant.ENABLE)) {
+                throw new DeletionNotAllowedException(MessageConstant.DISH_ON_SALE);
+            }
+        }
+
+        // 如果菜品跟套餐有关联，不能删
+/*        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<SetmealDish>()
+                .select(SetmealDish::getDishId)
+                .in(SetmealDish::getDishId, ids);
+        List<SetmealDish> setmealDishIds= setmealDishMapper.selectList(queryWrapper);
+        if (setmealDishes != null && !setmealDishes.isEmpty()) {
+            throw new DeletionNotAllowedException(MessageConstant.DISH_BE_RELATED_BY_SETMEAL);
+        }*/
+
+        // 删除菜品
+
+        // 删除菜品对应的口味
     }
 }

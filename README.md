@@ -85,3 +85,25 @@ dishMapper.insert(dish);
 // 执行完insert后，mybatis-plus自动把主键填充到entity对象中
 Long dishId = dish.getId();
 ```
+
+## 四、spring-doc配置踩坑记录
+
+spring-doc文档1：https://springdoc.cn/spring-rest-openapi-documentation/
+
+spring-doc文档2：https://juejin.cn/post/7475675805390323763
+
+我无论怎么样，页面swagger-ui始终像是下面的这段英文：
+```text
+Unable to render this definition
+The provided definition does not specify a valid version field.
+
+Please indicate a valid Swagger or OpenAPI version field. 
+Supported version fields are swagger: "2.0" 
+and those that match openapi: 3.x.y (for example, openapi: 3.1.0).
+```
+
+最终通过这位兄弟的文章，解决了这个问题：https://juejin.cn/post/7377230203153727498
+
+<mark>
+但是注意，只要WebMvcConfigurer中其它消息转换器的优先级不等于0，swagger-ui就可以正常工作。
+</mark>

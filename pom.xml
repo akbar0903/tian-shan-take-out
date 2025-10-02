@@ -34,6 +34,7 @@
         <jaxb-api>2.3.1</jaxb-api>
         <activation>1.1.1</activation>
         <jaxb-runtime>2.3.3</jaxb-runtime>
+        <springdoc>2.8.9</springdoc>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -106,6 +107,13 @@
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${jaxb-runtime}</version>
+            </dependency>
+
+            <!--springdoc，openapi-3接口文档-->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

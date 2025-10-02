@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/DishPageQueryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/com/akbar/mapper/DishMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/SetmealDishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/DishMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -83,7 +86,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.itangcent.idea.plugin.configurable.rootConfigurable.apifox",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -201,7 +204,8 @@
       <workItem from="1759304447413" duration="7733000" />
       <workItem from="1759320671251" duration="6789000" />
       <workItem from="1759327843726" duration="3394000" />
-      <workItem from="1759366570486" duration="37721000" />
+      <workItem from="1759366570486" duration="40536000" />
+      <workItem from="1759411932302" duration="4538000" />
     </task>
     <servers />
   </component>

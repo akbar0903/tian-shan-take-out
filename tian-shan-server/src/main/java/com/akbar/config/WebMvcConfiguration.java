@@ -2,7 +2,10 @@ package com.akbar.config;
 
 import com.akbar.interceptor.JwtTokenAdminInterceptor;
 import com.akbar.json.JacksonObjectMapper;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -19,6 +22,12 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     @Autowired
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
+
+    /**
+     * 自定义消息转换器的优先级
+     * 不能等于0，否则swagger不能正常显示
+     */
+    private static final Integer CONVERT_PRIORITY = 1;
 
 
     /**
@@ -43,7 +52,20 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
         // 设置一个对象转换器
         converter.setObjectMapper(new JacksonObjectMapper());
         // 添加到转换器列表中, 优先级最高
-        converters.add(0,converter);
+        converters.add(CONVERT_PRIORITY, converter);
     }
 
+
+    /**
+     * swagger配置
+     */
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title("天山外卖系统API文档")
+                        .description("天山外卖系统API文档，基于Spring Boot3，java-17，Mybatis-plus")
+                        .version("1.0")
+                );
+    }
 }
