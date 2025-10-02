@@ -1,11 +1,16 @@
 package com.akbar.service.impl;
 
 import com.akbar.dto.DishDTO;
+import com.akbar.dto.DishPageQueryDTO;
 import com.akbar.entity.Dish;
 import com.akbar.entity.DishFlavor;
 import com.akbar.mapper.DishFlavorMapper;
 import com.akbar.mapper.DishMapper;
+import com.akbar.result.PageResult;
 import com.akbar.service.DishService;
+import com.akbar.vo.DishVO;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +52,22 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
                 dishFlavorMapper.insert(flavor);
             }
         }
+    }
+
+
+    /**
+     * 分页查询菜品
+     */
+    @Override
+    public PageResult pageQuery(DishPageQueryDTO queryDTO) {
+        Page<DishVO> page = Page.of(queryDTO.getPage(), queryDTO.getPageSize());
+
+        Page<DishVO> result = dishMapper.pageQuery(page,
+                queryDTO.getName(),
+                queryDTO.getStatus(),
+                queryDTO.getCategoryId()
+        );
+
+        return new PageResult(result.getTotal(), result.getRecords());
     }
 }

@@ -5,29 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/DishDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/handler/AutoFillHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/DishFlavorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/AutoFillConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/AutoFillConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/enumeration/OperationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/enumeration/OperationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/CategoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Setmeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/Setmeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/annotation/AutoFill.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/annotation/AutoFill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/aspect/AutoFillAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/aspect/AutoFillAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/DishPageQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/com/akbar/mapper/DishMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/DishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +201,7 @@
       <workItem from="1759304447413" duration="7733000" />
       <workItem from="1759320671251" duration="6789000" />
       <workItem from="1759327843726" duration="3394000" />
-      <workItem from="1759366570486" duration="35013000" />
+      <workItem from="1759366570486" duration="37721000" />
     </task>
     <servers />
   </component>
