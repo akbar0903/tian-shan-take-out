@@ -23,13 +23,17 @@
 
     <properties>
         <java.version>17</java.version>
-        <mybatis-plus-bom.version>3.5.12</mybatis-plus-bom.version>
-        <druid.version>1.2.27</druid.version>
-        <lombok.version>1.18.38</lombok.version>
-        <jjwt-api.version>0.12.6</jjwt-api.version>
-        <jjwt-impl.version>0.12.6</jjwt-impl.version>
-        <jjwt-jackson.version>0.12.6</jjwt-jackson.version>
-        <jbcrypt.version>0.4</jbcrypt.version>
+        <mybatis-plus-bom>3.5.12</mybatis-plus-bom>
+        <druid>1.2.27</druid>
+        <lombok>1.18.38</lombok>
+        <jjwt-api>0.12.6</jjwt-api>
+        <jjwt-impl>0.12.6</jjwt-impl>
+        <jjwt-jackson>0.12.6</jjwt-jackson>
+        <jbcrypt>0.4</jbcrypt>
+        <aliyun-sdk-oss>3.17.4</aliyun-sdk-oss>
+        <jaxb-api>2.3.1</jaxb-api>
+        <activation>1.1.1</activation>
+        <jaxb-runtime>2.3.3</jaxb-runtime>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -42,7 +46,7 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-bom</artifactId>
-                <version>${mybatis-plus-bom.version}</version>
+                <version>${mybatis-plus-bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -50,37 +54,58 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-3-starter</artifactId>
-                <version>${druid.version}</version>
+                <version>${druid}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
+                <version>${lombok}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt-api</artifactId>
-                <version>${jjwt-api.version}</version>
+                <version>${jjwt-api}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt-impl</artifactId>
-                <version>${jjwt-impl.version}</version>
+                <version>${jjwt-impl}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt-jackson</artifactId>
-                <version>${jjwt-jackson.version}</version>
+                <version>${jjwt-jackson}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.mindrot</groupId>
                 <artifactId>jbcrypt</artifactId>
-                <version>${jbcrypt.version}</version>
+                <version>${jbcrypt}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb-runtime}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

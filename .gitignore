@@ -38,3 +38,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### 忽略所有自定义环境配置文件 ###
+/tian-shan-server/src/main/resources/application-*.yml

@@ -26,3 +26,11 @@ tian-shan:
     admin-secret-key: TIHGjrruCw2k6DAwcgbPRZvJvvwCwI4xYHZhgrErHs4=
     admin-ttl: 7200000  # 2小时(7200000ms)
     admin-token-name: token
+
+  # 阿里云oss配置信息
+  alioss:
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
+    region:
