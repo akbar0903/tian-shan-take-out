@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5468ca0a-c57c-4342-9cd4-4d54a6522f74" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/constant/AutoFillConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/constant/JwtClaimsConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/constant/PasswordConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/constant/StatusConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/context/BaseContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/enumeration/OperationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/exception/AccountLockedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/exception/AccountNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/exception/BaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/exception/DeletionNotAllowedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/exception/PasswordErrorException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/json/JacksonObjectMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/properties/AliossProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/properties/JwtProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/result/PageResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/result/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/utils/AliOssUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-common/src/main/java/com/akbar/utils/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/CategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/CategoryPageQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/DishDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/DishPageQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/EmployeeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/EmployeeLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/dto/EmployeePageQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/AddressBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/Dish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/DishFlavor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/Orders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/Setmeal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/SetmealDish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/ShoppingCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-pojo/src/main/java/com/akbar/vo/EmployeeLoginVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/annotation/AutoFill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/aspect/AutoFillAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/config/MybatisPlusConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/config/OssConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/config/RedisConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/admin/CommonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/admin/ShopController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/controller/user/ShopController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/handler/AutoFillHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/handler/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/interceptor/JwtTokenAdminInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/CategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/DishFlavorMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/DishMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/EmployeeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/SetmealDishMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/mapper/SetmealMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/impl/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/main/resources/com/akbar/mapper/DishMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/test/java/com/akbar/CommonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tian-shan-server/src/test/java/com/akbar/RedisTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "akbar0903"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/akbar0903/tian-shan-take-out.git",
+    "accountId": "2df0d13e-9457-4c05-ab04-d38f5075dbbb"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\maven\apache-maven-3.9.10" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.9.10\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="33Ye2ewwZdpWBvtSbtAXGohWm9A" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TianShanApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Java-Project/tian-shan-take-out/tian-shan-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TianShanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.akbar.TianShanApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5468ca0a-c57c-4342-9cd4-4d54a6522f74" name="Changes" comment="" />
+      <created>1751516125111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751516125111</updated>
+      <workItem from="1751516126844" duration="374000" />
+      <workItem from="1759498230020" duration="598000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

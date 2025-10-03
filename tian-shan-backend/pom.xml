@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.akbar</groupId>
-    <artifactId>tian-shan-take-out</artifactId>
+    <artifactId>tian-shan-backend</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
