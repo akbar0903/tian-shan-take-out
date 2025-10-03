@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/learning-notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/RedisConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/ShopController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/ShopController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/RedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/learning-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/learning-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/MybatisPlusConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/TianShanApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/CommonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,98 +65,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.TianShanApplicationTest.PasswordEncoderTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TianShanApplicationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TianShanApplicationTest.generateRandomKeyTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TianShanApplicationTest.jwtTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.TianShanApplicationTest.mybatisPlusPageTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-server [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-take-out [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-take-out [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-take-out [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tian-shan-take-out [verify].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TianShanApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.RedisTest.testHash.executor": "Run",
+    "JUnit.RedisTest.testRedisTemplate.executor": "Run",
+    "JUnit.RedisTest.testString.executor": "Debug",
+    "JUnit.TianShanApplicationTest.PasswordEncoderTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.generateRandomKeyTest.executor": "Run",
+    "JUnit.TianShanApplicationTest.jwtTest.executor": "Debug",
+    "JUnit.TianShanApplicationTest.mybatisPlusPageTest.executor": "Run",
+    "Maven.tian-shan-server [clean].executor": "Run",
+    "Maven.tian-shan-server [install].executor": "Run",
+    "Maven.tian-shan-take-out [clean].executor": "Run",
+    "Maven.tian-shan-take-out [compile].executor": "Run",
+    "Maven.tian-shan-take-out [install].executor": "Run",
+    "Maven.tian-shan-take-out [verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TianShanApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.akbar" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TianShanApplication">
-    <configuration name="TianShanApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommonTest.jwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tian-shan-server" />
       <option name="PACKAGE_NAME" value="com.akbar" />
-      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TianShanApplicationTest.PasswordEncoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tian-shan-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.akbar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.akbar" />
-      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
-      <option name="METHOD_NAME" value="PasswordEncoderTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TianShanApplicationTest.generateRandomKeyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tian-shan-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.akbar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.akbar" />
-      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
-      <option name="METHOD_NAME" value="generateRandomKeyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TianShanApplicationTest.jwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tian-shan-server" />
-      <option name="PACKAGE_NAME" value="com.akbar" />
-      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.CommonTest" />
       <option name="METHOD_NAME" value="jwtTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TianShanApplicationTest.mybatisPlusPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommonTest.mybatisPlusPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tian-shan-server" />
       <extension name="coverage">
         <pattern>
@@ -165,8 +130,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.akbar" />
-      <option name="MAIN_CLASS_NAME" value="com.akbar.TianShanApplicationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.CommonTest" />
       <option name="METHOD_NAME" value="mybatisPlusPageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.RedisTest" />
+      <option name="METHOD_NAME" value="testHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testRedisTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.RedisTest" />
+      <option name="METHOD_NAME" value="testRedisTemplate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.RedisTest" />
+      <option name="METHOD_NAME" value="testString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TianShanApplicationTest.jwtTest" />
-        <item itemvalue="JUnit.TianShanApplicationTest.mybatisPlusPageTest" />
-        <item itemvalue="JUnit.TianShanApplicationTest.PasswordEncoderTest" />
-        <item itemvalue="JUnit.TianShanApplicationTest.generateRandomKeyTest" />
-        <item itemvalue="JUnit.TianShanApplicationTest" />
+        <item itemvalue="JUnit.RedisTest.testHash" />
+        <item itemvalue="JUnit.RedisTest.testString" />
+        <item itemvalue="JUnit.RedisTest.testRedisTemplate" />
+        <item itemvalue="JUnit.CommonTest.jwtTest" />
+        <item itemvalue="JUnit.CommonTest.mybatisPlusPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +231,7 @@
       <workItem from="1759327843726" duration="3394000" />
       <workItem from="1759366570486" duration="40536000" />
       <workItem from="1759411932302" duration="4721000" />
-      <workItem from="1759448068589" duration="10552000" />
+      <workItem from="1759448068589" duration="20831000" />
     </task>
     <servers />
   </component>

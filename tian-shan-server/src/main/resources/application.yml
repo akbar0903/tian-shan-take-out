@@ -10,7 +10,14 @@ spring:
       url: jdbc:mysql://${tian-shan.datasource.host}:${tian-shan.datasource.port}/${tian-shan.datasource.database}?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: ${tian-shan.datasource.username}
       password: ${tian-shan.datasource.password}
+  data:
+    redis:
+      host: ${tian-shan.redis.host}
+      port: ${tian-shan.redis.port}
+      password: ${tian-shan.redis.password}
+      database: ${tian-shan.redis.database}
 
+# mybatis-plus配置
 mybatis-plus:
   type-aliases-package: com.akbar.entity
   configuration:
@@ -20,7 +27,7 @@ mybatis-plus:
     db-config:
       id-type: auto
 
-# swagger(SpringDoc)配置信息
+# swagger(SpringDoc)配置
 springdoc:
   api-docs:
     enabled: true
@@ -32,14 +39,14 @@ springdoc:
       paths-to-match:
         - /user/**
 
-# jwt配置信息
+# jwt配置
 tian-shan:
   jwt:
     admin-secret-key: TIHGjrruCw2k6DAwcgbPRZvJvvwCwI4xYHZhgrErHs4=
     admin-ttl: 7200000  # 2小时(7200000ms)
     admin-token-name: token
 
-  # 阿里云oss配置信息
+  # 阿里云oss配置
   alioss:
     endpoint:
     access-key-id:

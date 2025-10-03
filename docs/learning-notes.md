@@ -105,3 +105,81 @@ and those that match openapi: 3.x.y (for example, openapi: 3.1.0).
 <mark>
 但是注意，只要WebMvcConfigurer中其它消息转换器的优先级不等于0，swagger-ui就可以正常工作。
 </mark>
+
+
+
+## 五、Redis学习
+
+中文官网：https://www.redis.net.cn/
+
+数据类型：
+
+<img src="assets/image-20251003144050153.png" alt="image-20251003144050153" />
+
+redis的java客户端很多，最常用的几种：
+
+-   Jedis
+-   Lettuce
+-   Spring Data Redis
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+    <version>3.5.4</version>
+</dependency>
+```
+
+```yml
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ""
+      database: 0   # 对应DB0数据库，默认就是0
+```
+
+**为什么要配置redis的Key序列化器：**
+
+Redis 本身只能存储 **二进制数据**，不能直接理解 Java 对象。如果不配置序列化：
+
+-   存进去的 key/value 是二进制乱码，不直观。
+
+-   存储空间大（因为 JDK 序列化臃肿）。
+
+比如：
+
+```java
+ValueOperations<String, Object> ops = redisTemplate.opsForValue();
+ops.set("user:1", new User(1L, "Akbar"));
+```
+
+如果没配置序列化器，Redis 里看到的 key/value 是一堆二进制乱码，不是 `user:1` → `{id:1,name:Akbar}`。
+
+配置示例：
+
+```java
+@Configuration
+public class RedisConfig {
+
+    @Bean
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setConnectionFactory(connectionFactory);
+
+        // key 采用 String 序列化
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setHashKeySerializer(new StringRedisSerializer());
+
+        // value 采用 JSON 序列化
+        GenericJackson2JsonRedisSerializer jsonSerializer = new GenericJackson2JsonRedisSerializer();
+        template.setValueSerializer(jsonSerializer);
+        template.setHashValueSerializer(jsonSerializer);
+
+        template.afterPropertiesSet();
+        return template;
+    }
+}
+```
+

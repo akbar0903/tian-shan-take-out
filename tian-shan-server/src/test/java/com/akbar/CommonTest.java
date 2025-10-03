@@ -17,9 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@SpringBootTest
+//@SpringBootTest
 @Slf4j
-public class TianShanApplicationTest {
+public class CommonTest {
 
     @Autowired
     private JwtProperties jwtProperties;
