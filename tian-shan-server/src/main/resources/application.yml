@@ -24,6 +24,13 @@ mybatis-plus:
 springdoc:
   api-docs:
     enabled: true
+  group-configs:  # 接口分组配置
+    - group: admin
+      paths-to-match:
+        - /admin/**
+    - group: user
+      paths-to-match:
+        - /user/**
 
 # jwt配置信息
 tian-shan:

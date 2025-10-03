@@ -25,6 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Objects;
 
+
 @Service
 public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements DishService {
 
@@ -95,16 +96,81 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         }
 
         // 如果菜品跟套餐有关联，不能删
-/*        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<SetmealDish>()
+        LambdaQueryWrapper<SetmealDish> setmealDishQueryWrapper = new LambdaQueryWrapper<SetmealDish>()
                 .select(SetmealDish::getDishId)
                 .in(SetmealDish::getDishId, ids);
-        List<SetmealDish> setmealDishIds= setmealDishMapper.selectList(queryWrapper);
-        if (setmealDishes != null && !setmealDishes.isEmpty()) {
+        List<SetmealDish> dishIds = setmealDishMapper.selectList(setmealDishQueryWrapper);
+        if (dishIds != null && !dishIds.isEmpty()) {
             throw new DeletionNotAllowedException(MessageConstant.DISH_BE_RELATED_BY_SETMEAL);
-        }*/
+        }
 
         // 删除菜品
+        dishMapper.deleteByIds(ids);
 
         // 删除菜品对应的口味
+        LambdaQueryWrapper<DishFlavor> dishFlavorQueryWrapper = new LambdaQueryWrapper<DishFlavor>()
+                .in(DishFlavor::getDishId, ids);
+        dishFlavorMapper.delete(dishFlavorQueryWrapper);
+    }
+
+
+    /**
+     * 根据id查询菜品及其对应的口味
+     */
+    @Override
+    public DishVO getByIdWithFlavors(Long id) {
+        // 根据id查询菜品信息。
+        Dish dish = dishMapper.selectById(id);
+
+        // 根据菜品id查询口味数据
+        LambdaQueryWrapper<DishFlavor> queryWrapper = new LambdaQueryWrapper<DishFlavor>()
+                .eq(DishFlavor::getDishId, id);
+        List<DishFlavor> dishFlavors = dishFlavorMapper.selectList(queryWrapper);
+
+        // 将查询到的数据封装到DishVO 中
+        DishVO dishVO = new DishVO();
+        BeanUtils.copyProperties(dish, dishVO);
+        dishVO.setFlavors(dishFlavors);
+
+        return dishVO;
+    }
+
+
+    /**
+     * 更新菜品及其对应的口味
+     */
+    @Override
+    public void updateWithFlavors(DishDTO dishDTO) {
+        // 菜品信息更新相对简单
+        Dish dish = new Dish();
+        BeanUtils.copyProperties(dishDTO, dish);
+        dishMapper.updateById(dish);
+
+        // 先把该菜品对应的所有口味删除，防止脏数据
+        LambdaQueryWrapper<DishFlavor> queryWrapper = new LambdaQueryWrapper<DishFlavor>()
+                .eq(DishFlavor::getDishId, dish.getId());
+        dishFlavorMapper.delete(queryWrapper);
+
+        // 再把新的口味插入
+        List<DishFlavor> flavors = dishDTO.getFlavors();
+        if (flavors != null && !flavors.isEmpty()) {
+            for (DishFlavor flavor : flavors) {
+                flavor.setDishId(dish.getId());
+                dishFlavorMapper.insert(flavor);
+            }
+        }
+    }
+
+
+    /**
+     * 起售或停售菜品
+     */
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = Dish.builder()
+                .id(id)
+                .status(status)
+                .build();
+        dishMapper.updateById(dish);
     }
 }

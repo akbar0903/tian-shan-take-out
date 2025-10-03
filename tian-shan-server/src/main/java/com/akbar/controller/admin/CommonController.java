@@ -3,6 +3,8 @@ package com.akbar.controller.admin;
 import com.akbar.constant.MessageConstant;
 import com.akbar.result.Result;
 import com.akbar.utils.AliOssUtil;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,7 @@ import java.util.UUID;
 /**
  * 通用接口
  */
+@Tag(name = "通用接口")
 @RestController
 @RequestMapping("/admin/common")
 @Slf4j
@@ -28,6 +31,7 @@ public class CommonController {
     /**
      * 文件上传接口
      */
+    @Operation(summary = "文件上传")
     @PostMapping("/upload")
     public Result<String> upload(MultipartFile file) {
         log.info("要上传的文件：{}", file);

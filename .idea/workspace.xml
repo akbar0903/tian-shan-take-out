@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/SetmealDishMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/learning-notes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CommonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
@@ -34,6 +34,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/akbar0903/tian-shan-take-out.git",
+    "accountId": "2df0d13e-9457-4c05-ab04-d38f5075dbbb"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/CategoryController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/EmployeeServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
@@ -56,40 +65,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.TianShanApplicationTest.PasswordEncoderTest.executor": "Run",
-    "JUnit.TianShanApplicationTest.executor": "Run",
-    "JUnit.TianShanApplicationTest.generateRandomKeyTest.executor": "Run",
-    "JUnit.TianShanApplicationTest.jwtTest.executor": "Debug",
-    "JUnit.TianShanApplicationTest.mybatisPlusPageTest.executor": "Run",
-    "Maven.tian-shan-server [clean].executor": "Run",
-    "Maven.tian-shan-server [install].executor": "Run",
-    "Maven.tian-shan-take-out [clean].executor": "Run",
-    "Maven.tian-shan-take-out [compile].executor": "Run",
-    "Maven.tian-shan-take-out [install].executor": "Run",
-    "Maven.tian-shan-take-out [verify].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.TianShanApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.TianShanApplicationTest.PasswordEncoderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TianShanApplicationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TianShanApplicationTest.generateRandomKeyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TianShanApplicationTest.jwtTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TianShanApplicationTest.mybatisPlusPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-server [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-take-out [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-take-out [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-take-out [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tian-shan-take-out [verify].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TianShanApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.akbar" />
@@ -188,6 +197,9 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="02cae231-a86f-4244-a22f-7096c685046d" name="Changes" comment="" />
@@ -205,7 +217,8 @@
       <workItem from="1759320671251" duration="6789000" />
       <workItem from="1759327843726" duration="3394000" />
       <workItem from="1759366570486" duration="40536000" />
-      <workItem from="1759411932302" duration="4538000" />
+      <workItem from="1759411932302" duration="4721000" />
+      <workItem from="1759448068589" duration="10552000" />
     </task>
     <servers />
   </component>
