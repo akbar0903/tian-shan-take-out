@@ -67,3 +67,5 @@ lerna-debug.log*
 *.sln
 *.sw?
 
+############################### MP-weixin ##############################
+/mp-weixin/node-modules

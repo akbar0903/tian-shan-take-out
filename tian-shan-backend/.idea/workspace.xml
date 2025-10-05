@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5468ca0a-c57c-4342-9cd4-4d54a6522f74" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/auto-imports.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/components.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/layout/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/layout/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/stores/modules/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/stores/modules/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/styles/elplus-reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/styles/elplus-reset.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/utils/request.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/views/dashboard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/views/dashboard/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/views/employee/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/views/employee/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/views/login/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/utils/HttpClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/HttpClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/learning-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/learning-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -54,27 +56,64 @@
     <option name="abbreviatePackageNames" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TianShanApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Java-Project/tian-shan-take-out/tian-shan-backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.HttpClientTest.testGet.executor": "Run",
+    "JUnit.HttpClientTest.testPost.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TianShanApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Java-Project/tian-shan-take-out/tian-shan-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.HttpClientTest.testPost">
+    <configuration name="HttpClientTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.HttpClientTest" />
+      <option name="METHOD_NAME" value="testGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpClientTest.testPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.HttpClientTest" />
+      <option name="METHOD_NAME" value="testPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TianShanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tian-shan-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.akbar.TianShanApplication" />
@@ -82,6 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HttpClientTest.testPost" />
+        <item itemvalue="JUnit.HttpClientTest.testGet" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -100,7 +145,7 @@
       <updated>1751516125111</updated>
       <workItem from="1751516126844" duration="374000" />
       <workItem from="1759498230020" duration="1159000" />
-      <workItem from="1759552391874" duration="8388000" />
+      <workItem from="1759552391874" duration="14780000" />
     </task>
     <servers />
   </component>

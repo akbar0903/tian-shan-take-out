@@ -36,6 +36,7 @@
         <jaxb-runtime>2.3.3</jaxb-runtime>
         <springdoc>2.8.9</springdoc>
         <redis>3.5.4</redis>
+        <fastjson>2.0.10</fastjson>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -122,6 +123,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${redis}</version>
+            </dependency>
+
+            <!--fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

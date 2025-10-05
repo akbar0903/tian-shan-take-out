@@ -114,7 +114,7 @@ and those that match openapi: 3.x.y (for example, openapi: 3.1.0).
 
 数据类型：
 
-<img src="assets/image-20251003144050153.png" alt="image-20251003144050153" />
+<img src="assets/image-20251003144050153.png" alt="image-20251003144050153" style="zoom:80%;" />
 
 redis的java客户端很多，最常用的几种：
 
@@ -183,3 +183,23 @@ public class RedisConfig {
 }
 ```
 
+## 六、httpClient
+
+```xml
+<!--httpClient-->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.14</version>
+</dependency>
+```
+
+Apache HttpClient是客户端去主动发 HTTP 请求的工具。
+
+现在项目里的 **后端 Controller** 是被动接收请求的。
+
+但是有时候，我们的的后端服务也需要作为“客户端”，去调用别人家的接口，这时候就需要 `HttpClient` 或类似工具了。
+
+<mark>注意：阿里云oss的：`aliyun-sdk-oss`已经使用了这个httpclient</mark>
+
+<img src="assets/image-20251005200633114.png" alt="image-20251005200633114" style="zoom:80%;" />
