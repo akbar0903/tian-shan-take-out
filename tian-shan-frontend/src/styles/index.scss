@@ -1,0 +1,20 @@
+@use 'normalize.css';
+@use 'variables' as *;
+@use "elplus-reset.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  /* 禁止浏览器默认滚动，将滚动控制权交给内部容器 */
+  overflow: hidden;
+}

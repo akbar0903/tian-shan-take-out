@@ -1,0 +1,44 @@
+$color-primary: #FFC200;
+$color-success: #20232A;
+$color-warning: #f5a524;
+$color-danger: #f31260;
+$color-error: #f31260;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // 自定义主题颜色
+  $colors: (
+    'primary': (
+      'base': $color-primary, // 将主题色修改为橙色
+    ),
+    'success': (
+    'base': $color-success,
+    ),
+    'warning':(
+    'base': $color-warning,
+    ),
+    'danger': (
+    'base': $color-danger,
+    ),
+    'error': (
+    'base': $color-error,
+    ),
+  )
+);
+
+@use "element-plus/theme-chalk/src/index.scss" as *;
+/* Elmessage, MessageBox */
+@use 'element-plus/theme-chalk/src/message.scss';
+@use 'element-plus/theme-chalk/src/message-box.scss';
+
+
+.el-button--primary {
+  color: $color-success;
+  &:hover {
+    color: $color-success;
+  }
+} 
+
+.el-dropdown-menu__item:not(.is-disabled):hover, 
+.el-dropdown-menu__item:not(.is-disabled):focus{
+  color: $color-success;
+}

@@ -1,0 +1,36 @@
+/* ########## COLOR ############ */
+/* BG-COLOR */
+$primary-color: #FFC200;
+$secondary-color: #ffe066;
+$white-color: #FFFFFF;
+$sidebar-bg-color: #343744;
+$main-bg-color: #f3f4f7;
+
+/* TEXT COLOR */
+$primary-text-color: #333333;
+
+/* ############# FONT SIZE ############# */
+$text-xs: 0.75rem;   /* 12px - 辅助信息 */
+$text-sm: 0.875rem;  /* 14px - 小号正文 */
+$text-base: 1rem;    /* 16px - 基础正文 */
+$text-lg: 1.125rem;  /* 18px - 大号正文 */
+$text-xl: 1.25rem;   /* 20px - 小标题 */
+$text-2xl: 1.5rem;   /* 24px - 文章标题 */
+$text-3xl: 1.875rem; /* 30px - 区块标题 */
+$text-4xl: 2.25rem;  /* 36px - 页面主标题 */
+$text-5xl: 3rem;     /* 48px - 重要标题 */
+
+/* ############# SPACING ############# */
+/* 使用 4px 作为基础单位，形成一个 4, 8, 12, 16, 24, 32... 的数列 */
+$space-xs: 4px;   /* 极小间距，如图标与文字 */
+$space-sm: 8px;   /* 小间距，如列表项之间 */
+$space-md: 16px;  /* 中等间距，如段落与标题 */
+$space-lg: 24px;  /* 大间距，如卡片之间 */
+$space-xl: 32px;  /* 超大间距，如页面区块之间 */
+$space-2xl: 48px; /* 巨大间距，如页脚与主内容 */
+
+/* ############# BORDER RADIUS ############# */
+$radius-sm: 4px;  /* 小圆角，如按钮 */
+$radius-md: 8px;  /* 中圆角，如卡片 */
+$radius-lg: 12px; /* 大圆角，如模态框 */
+$radius-full: 9999px; /* 全圆角，如头像 */
