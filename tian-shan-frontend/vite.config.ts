@@ -21,9 +21,17 @@ export default defineConfig({
     alias: [{ find: '@', replacement: resolve(__dirname, 'src') }],
   },
 
-  // 配置端口号
+  // 服务器配置
   server: {
     port: 8090,
+    // 代理跨域
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 
   // 全局引入scss变量

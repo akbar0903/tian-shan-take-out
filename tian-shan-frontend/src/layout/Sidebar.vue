@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { LayoutDashboard, UserRound, Salad, PanelLeftOpen, PanelLeftClose } from 'lucide-vue-next'
+import { LayoutDashboard, UserRound, Salad, PanelLeftOpen, PanelLeftClose, Blocks } from 'lucide-vue-next'
 
 const isCollapse = ref(false)
 
@@ -18,8 +18,14 @@ const menuItems = ref([
     path: '/dish',
   },
   {
+    index: '/category',
+    title: '分类管理',
+    icon: Blocks,
+    path: '/category',
+  },
+  {
     index: '/employee',
-    title: '用户管理',
+    title: '员工管理',
     icon: UserRound,
     path: '/employee',
   },

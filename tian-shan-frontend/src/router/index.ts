@@ -32,6 +32,11 @@ const routes = [
         component: () => import('@/views/dish/index.vue'),
         name: 'Dish',
       },
+      {
+        path: 'category',
+        component: () => import('@/views/category/index.vue'),
+        name: 'Category',
+      },
     ],
   },
 ]

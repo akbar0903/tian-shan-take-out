@@ -1,26 +1,20 @@
-$color-primary: #FFC200;
-$color-success: #20232A;
-$color-warning: #f5a524;
-$color-danger: #f31260;
-$color-error: #f31260;
-
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   // 自定义主题颜色
   $colors: (
     'primary': (
-      'base': $color-primary, // 将主题色修改为橙色
+      'base': #006FEE, 
     ),
     'success': (
-    'base': $color-success,
+    'base': #17c964,
     ),
     'warning':(
-    'base': $color-warning,
+    'base': #f5a524,
     ),
     'danger': (
-    'base': $color-danger,
+    'base': #f31260,
     ),
     'error': (
-    'base': $color-error,
+    'base': #f31260,
     ),
   )
 );
@@ -30,15 +24,30 @@ $color-error: #f31260;
 @use 'element-plus/theme-chalk/src/message.scss';
 @use 'element-plus/theme-chalk/src/message-box.scss';
 
-
-.el-button--primary {
-  color: $color-success;
+/* 自定义按钮样式, 注意，这个primary-btn类名只能在type是default的时候（没有显示的声明type的时候）使用 */
+.primary-btn {
+  background-color: #FFC200;
+  border-color: #FFC200;
+  color: #20232A;
   &:hover {
-    color: $color-success;
+    background-color: darken(#FFC200, 5%);
+    border-color: darken(#FFC200, 5%);
+    color: #20232A;
   }
-} 
+}
 
-.el-dropdown-menu__item:not(.is-disabled):hover, 
-.el-dropdown-menu__item:not(.is-disabled):focus{
-  color: $color-success;
+.secondary-btn {
+  background-color: #20232A;
+  border-color: #20232A;
+  color: #FFFFFF;
+  &:hover {
+    background-color: darken(#FFFFFF, 60%);
+    border-color: darken(#FFFFFF, 60%);
+    color: #FFFFFF;
+  }
+}
+
+/* input */
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #FFC200 inset !important;
 }

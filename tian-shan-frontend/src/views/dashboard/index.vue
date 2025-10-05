@@ -2,32 +2,10 @@
 </script>
 
 <template>
-  <div>
-    <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-        <el-card shadow="never">
-      <h1>Hello World Hello World Hello World Hello World Hello World</h1>
-    </el-card>
-  </div>
+  <el-card>
+    <el-button class="primary-btn" size="large">按钮</el-button>
+    <el-button class="secondary-btn" size="large">按钮</el-button>
+  </el-card>
 </template>
 
 <style scoped>

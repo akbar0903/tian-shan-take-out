@@ -2,38 +2,44 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-interface UserState {
+interface UserInfo {
   id: number
   username: string
   name: string
-  token: string
 }
 
 //创建小仓库
-export const useUserStore = defineStore('userInfo', () => {
+export const useUserStore = defineStore(
+  'userInfo',
+  () => {
+    // state
+    const token = ref<string | null>(null)
+    const userInfo = ref<UserInfo | null>(null)
 
-  // 初始化数据
-  const userInfo = ref<UserState>({
-    id: 0,
-    name: '',
-    username: '',
-    token: ''
-  })
+    // actions
+    const setToken = (newToken: string) => {
+      token.value = newToken
+    }
 
-  const setToken = (token: string) => {
-    userInfo.value.token = token
-  }
+    const setUserInfo = (info: UserInfo) => {
+      userInfo.value = info
+    }
 
-  const removeToken = () => {
-    userInfo.value.token = ''
-  }
+    const logout = () => {
+      token.value = null
+      userInfo.value = null
+    }
 
-
-
-  //一定要返回一个对象，返回的对象中的属性和方法可以提供给组件使用
-  return {
-    userInfo,
-    setToken,
-    removeToken
-  }
-})
+    return {
+      token,
+      userInfo,
+      setToken,
+      setUserInfo,
+      logout,
+    }
+  },
+  {
+    // enable persistence for this store (works with pinia-plugin-persistedstate)
+    persist: true,
+  },
+)
