@@ -5,12 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5468ca0a-c57c-4342-9cd4-4d54a6522f74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/utils/HttpClientUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/HttpClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/learning-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/learning-notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/LoginFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/properties/WeChatProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/SetmealDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/SetmealPageQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/UserLoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/DishItemVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/SetmealVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/vo/UserLoginVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/SetmealController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/SetmealController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/interceptor/JwtTokenUserInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/SetmealService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/SetmealServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/com/akbar/mapper/SetmealMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/learning-notes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/JwtClaimsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/JwtClaimsConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/properties/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/properties/JwtProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/interceptor/JwtTokenAdminInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/interceptor/JwtTokenAdminInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/SetmealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/SetmealMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/CommonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/test/java/com/akbar/CommonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -54,10 +82,12 @@
   <component name="ProjectId" id="33Ye2ewwZdpWBvtSbtAXGohWm9A" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CommonTest.generateRandomKeyTest.executor": "Run",
     "JUnit.HttpClientTest.testGet.executor": "Run",
     "JUnit.HttpClientTest.testPost.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -70,7 +100,7 @@
     "Spring Boot.TianShanApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Java-Project/tian-shan-take-out/tian-shan-backend",
+    "last_opened_file_path": "E:/Java-Project/tian-shan-take-out/tian-shan-backend/tian-shan-server/src/main/java/com/akbar/controller/user",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -81,7 +111,33 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.HttpClientTest.testPost">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java-Project\tian-shan-take-out\tian-shan-backend\tian-shan-server\src\main\java\com\akbar\controller\user" />
+      <recent name="E:\Java-Project\tian-shan-take-out\tian-shan-backend\tian-shan-pojo\src\main\java\com\akbar\vo" />
+      <recent name="E:\Java-Project\tian-shan-take-out\tian-shan-backend\tian-shan-server\src\main\java\com\akbar\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.akbar.interceptor" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TianShanApplication">
+    <configuration name="CommonTest.generateRandomKeyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tian-shan-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.akbar" />
+      <option name="MAIN_CLASS_NAME" value="com.akbar.CommonTest" />
+      <option name="METHOD_NAME" value="generateRandomKeyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HttpClientTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tian-shan-server" />
       <extension name="coverage">
@@ -123,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommonTest.generateRandomKeyTest" />
         <item itemvalue="JUnit.HttpClientTest.testPost" />
         <item itemvalue="JUnit.HttpClientTest.testGet" />
       </list>
@@ -145,7 +202,8 @@
       <updated>1751516125111</updated>
       <workItem from="1751516126844" duration="374000" />
       <workItem from="1759498230020" duration="1159000" />
-      <workItem from="1759552391874" duration="14780000" />
+      <workItem from="1759552391874" duration="15919000" />
+      <workItem from="1759722814558" duration="19067000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,7 @@
 package com.akbar.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.time.LocalDateTime;
@@ -56,5 +58,6 @@ public class User {
      */
     private String avatar;
 
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 }

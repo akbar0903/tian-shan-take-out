@@ -2,6 +2,7 @@ package com.akbar.controller.admin;
 
 import com.akbar.dto.DishDTO;
 import com.akbar.dto.DishPageQueryDTO;
+import com.akbar.entity.Dish;
 import com.akbar.result.PageResult;
 import com.akbar.result.Result;
 import com.akbar.service.DishService;
@@ -94,5 +95,17 @@ public class DishController {
         dishService.startOrStop(status, id);
 
         return Result.success();
+    }
+
+
+    /**
+     * 根据分类id查询菜品列表
+     */
+    @Operation(summary = "根据分类id查询菜品列表")
+    @GetMapping("/list")
+    public Result<List<Dish>> list(Integer categoryId) {
+        List<Dish> dishList = dishService.list(categoryId);
+
+        return Result.success(dishList);
     }
 }

@@ -1,6 +1,7 @@
 package com.akbar.config;
 
 import com.akbar.interceptor.JwtTokenAdminInterceptor;
+import com.akbar.interceptor.JwtTokenUserInterceptor;
 import com.akbar.json.JacksonObjectMapper;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -23,6 +24,9 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Autowired
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
 
+    @Autowired
+    private JwtTokenUserInterceptor jwtTokenUserInterceptor;
+
     /**
      * 自定义消息转换器的优先级
      * 不能等于0，否则swagger不能正常显示
@@ -35,9 +39,15 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        // 注册管理端拦截器
         registry.addInterceptor(jwtTokenAdminInterceptor)
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/employee/login");
+
+        // 注册用户端拦截器
+        registry.addInterceptor(jwtTokenUserInterceptor)
+                .addPathPatterns("/user/**")
+                .excludePathPatterns("/user/user/login", "/user/shop/status");
     }
 
     /**

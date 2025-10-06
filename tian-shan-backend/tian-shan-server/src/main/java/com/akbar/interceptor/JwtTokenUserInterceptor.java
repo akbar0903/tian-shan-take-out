@@ -14,11 +14,11 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 /**
- * 管理端JWT Token拦截器
+ * 向程序用户端JWT Token拦截器
  */
 @Component
 @Slf4j
-public class JwtTokenAdminInterceptor implements HandlerInterceptor {
+public class JwtTokenUserInterceptor implements HandlerInterceptor {
 
     @Autowired
     private JwtProperties jwtProperties;
@@ -31,7 +31,7 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        String token = request.getHeader(jwtProperties.getAdminTokenName());
+        String token = request.getHeader(jwtProperties.getUserTokenName());
         try {
             /* 注意，不能这样写：(Long) claims.get(JwtClaimsConstant.EMP_ID);
              * 因为，如果存进去的不是Long类型，会抛出ClassCastException
@@ -39,10 +39,10 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
                 调用 .toString() → 把它变成字符串（比如 "123"）。
                 Long.valueOf("123") 会解析成一个 Long 对象。
              */
-            Claims claims = JwtUtil.parseJwt(jwtProperties.getAdminSecretKey(), token);
-            Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
-            log.info("当前登录的员工ID为：{}", empId);
-            BaseContext.setCurrentId(empId);
+            Claims claims = JwtUtil.parseJwt(jwtProperties.getUserSecretKey(), token);
+            Long userId = Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());
+            log.info("当前登录的用户ID为：{}", userId);
+            BaseContext.setCurrentId(userId);
 
             // 放行
             return true;

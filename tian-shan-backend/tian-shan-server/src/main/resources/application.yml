@@ -45,6 +45,10 @@ tian-shan:
     admin-secret-key: TIHGjrruCw2k6DAwcgbPRZvJvvwCwI4xYHZhgrErHs4=
     admin-ttl: 7200000  # 2小时(7200000ms)
     admin-token-name: token
+    # 小程序用户端
+    user-secret-key: Hyrslz32flxe9r1SGOY3AmSthTjkiOMjtFmdKdOtF+8=
+    user-ttl: 7200000
+    user-token-name: authentication
 
   # 阿里云oss配置
   alioss:
@@ -53,3 +57,9 @@ tian-shan:
     access-key-secret:
     bucket-name:
     region:
+
+  # 微信小程序配置
+  wechat:
+    appid: ${tian-shan.wechat.appid}
+    secret: ${tian-shan.wechat.secret}
+    grant_type: ${tian-shan.wechat.grant_type}

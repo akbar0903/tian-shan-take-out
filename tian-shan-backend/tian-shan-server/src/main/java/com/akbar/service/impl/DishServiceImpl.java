@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -72,7 +73,8 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
     public PageResult pageQuery(DishPageQueryDTO queryDTO) {
         Page<DishVO> page = Page.of(queryDTO.getPage(), queryDTO.getPageSize());
 
-        Page<DishVO> result = dishMapper.pageQuery(page,
+        Page<DishVO> result = dishMapper.pageQuery(
+                page,
                 queryDTO.getName(),
                 queryDTO.getStatus(),
                 queryDTO.getCategoryId()
@@ -173,4 +175,54 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
                 .build();
         dishMapper.updateById(dish);
     }
+
+
+    /**
+     * 根据菜品分类id查询菜品列表和其对应的口味
+     */
+    @Override
+    public List<DishVO> listWithFlavor(Long categoryId) {
+
+        // 查询菜品列表
+        LambdaQueryWrapper<Dish> dishQueryWrapper = new LambdaQueryWrapper<Dish>()
+                .eq(Dish::getCategoryId, categoryId)
+                .eq(Dish::getStatus, StatusConstant.ENABLE);
+        List<Dish> dishList = dishMapper.selectList(dishQueryWrapper);
+
+        // 最终返回的结果
+        List<DishVO> dishVOList = new ArrayList<>();
+
+        // 查询菜品对应的口味
+        for (Dish dish : dishList) {
+            DishVO dishVO = new DishVO();
+            BeanUtils.copyProperties(dish, dishVO);
+
+            // 查询该菜品对应的口味
+            LambdaQueryWrapper<DishFlavor> flavorQueryWrapper = new LambdaQueryWrapper<DishFlavor>()
+                    .eq(DishFlavor::getDishId, dish.getId());
+            List<DishFlavor> dishFlavors = dishFlavorMapper.selectList(flavorQueryWrapper);
+
+            // 将查询到的口味数据封装到DishVO中
+            dishVO.setFlavors(dishFlavors);
+
+            // 将DishVO添加到最终结果中
+            dishVOList.add(dishVO);
+        }
+
+        return dishVOList;
+    }
+
+
+    /**
+     * 根据菜品分类id查询菜品列表
+     */
+    @Override
+    public List<Dish> list(Integer categoryId) {
+
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<Dish>()
+                .eq(Dish::getCategoryId, categoryId)
+                .eq(Dish::getStatus, StatusConstant.ENABLE);
+        return dishMapper.selectList(queryWrapper);
+    }
 }
+
