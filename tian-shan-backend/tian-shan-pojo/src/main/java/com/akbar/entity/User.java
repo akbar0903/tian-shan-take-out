@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import lombok.*;
@@ -21,7 +22,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @TableName("user")
-public class User {
+public class User implements Serializable {
 
     /**
      * 主键

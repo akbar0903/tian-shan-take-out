@@ -2,8 +2,10 @@ package com.akbar.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class DishPageQueryDTO {
+public class DishPageQueryDTO implements Serializable {
 
     private int page;
 

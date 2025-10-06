@@ -1,5 +1,6 @@
 package com.akbar.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -20,7 +21,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @TableName("orders")
-public class Orders {
+public class Orders implements Serializable {
 
     /**
      * 主键

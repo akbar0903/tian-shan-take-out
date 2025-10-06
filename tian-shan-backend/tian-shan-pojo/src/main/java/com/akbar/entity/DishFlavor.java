@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 菜品口味关系表
@@ -17,7 +19,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @TableName("dish_flavor")
-public class DishFlavor {
+public class DishFlavor implements Serializable {
 
     /**
      * 主键

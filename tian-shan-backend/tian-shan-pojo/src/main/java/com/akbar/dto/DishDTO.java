@@ -3,12 +3,13 @@ package com.akbar.dto;
 import com.akbar.entity.DishFlavor;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class DishDTO {
+public class DishDTO implements Serializable {
 
     private Long id;
     //菜品名称

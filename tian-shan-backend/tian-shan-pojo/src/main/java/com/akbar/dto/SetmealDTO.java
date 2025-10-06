@@ -3,12 +3,13 @@ package com.akbar.dto;
 import com.akbar.entity.SetmealDish;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class SetmealDTO {
+public class SetmealDTO implements Serializable {
 
     private Long id;
 

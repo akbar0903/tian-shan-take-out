@@ -1,5 +1,6 @@
 package com.akbar.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
@@ -23,7 +24,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @TableName("setmeal")
-public class Setmeal {
+public class Setmeal implements Serializable {
 
     /**
      * 主键

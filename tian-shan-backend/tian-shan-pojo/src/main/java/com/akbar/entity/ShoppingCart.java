@@ -1,5 +1,6 @@
 package com.akbar.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -20,7 +21,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @TableName("shopping_cart")
-public class ShoppingCart {
+public class ShoppingCart implements Serializable {
 
     /**
      * 主键

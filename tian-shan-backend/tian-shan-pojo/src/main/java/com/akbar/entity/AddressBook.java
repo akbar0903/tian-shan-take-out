@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 地址簿
@@ -17,7 +19,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @TableName("address_book")
-public class AddressBook{
+public class AddressBook implements Serializable {
 
     /**
      * 主键

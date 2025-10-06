@@ -2,8 +2,10 @@ package com.akbar.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class SetmealPageQueryDTO {
+public class SetmealPageQueryDTO implements Serializable {
 
     private int page;
 

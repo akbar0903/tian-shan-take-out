@@ -2,8 +2,10 @@ package com.akbar.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class EmployeePageQueryDTO {
+public class EmployeePageQueryDTO implements Serializable {
 
     //员工姓名
     private String name;
