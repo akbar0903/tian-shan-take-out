@@ -9,6 +9,7 @@ import com.akbar.vo.SetmealVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +28,7 @@ public class SetmealController {
      */
     @Operation(summary = "添加套餐")
     @PostMapping
+    @CacheEvict(cacheNames = "setmealCache", key = "#setmealDTO.categoryId")    // 把这个分类下的所有套餐缓存都清楚掉，然后再往数据库添加这个套餐
     public Result<Void> save(@RequestBody SetmealDTO setmealDTO) {
         setmealService.saveWithDish(setmealDTO);
         return Result.success();
@@ -49,6 +51,7 @@ public class SetmealController {
      */
     @DeleteMapping
     @Operation(summary = "批量删除套餐")
+    @CacheEvict(cacheNames = "setmealCache", allEntries = true)
     public Result<Void> delete(@RequestParam List<Long> ids) {
         setmealService.deleteBatch(ids);
         return Result.success();
@@ -71,6 +74,7 @@ public class SetmealController {
      */
     @PutMapping
     @Operation(summary = "修改套餐")
+    @CacheEvict(cacheNames = "setmealCache", allEntries = true)
     public Result<Void> update(@RequestBody SetmealDTO setmealDTO) {
         setmealService.update(setmealDTO);
         return Result.success();
@@ -82,6 +86,7 @@ public class SetmealController {
      */
     @PostMapping("/status/{status}")
     @Operation(summary = "套餐起售停售")
+    @CacheEvict(cacheNames = "setmealCache", allEntries = true)
     public Result<Void> startOrStop(@PathVariable Integer status, Long id) {
         setmealService.startOrStop(status, id);
         return Result.success();

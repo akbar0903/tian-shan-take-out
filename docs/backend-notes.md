@@ -206,3 +206,15 @@ Apache HttpClient是客户端去主动发 HTTP 请求的工具。
 <mark>注意：阿里云oss的：`aliyun-sdk-oss`已经使用了这个httpclient</mark>
 
 <img src="assets/image-20251005200633114.png" alt="image-20251005200633114" style="zoom:80%;" />
+
+## 七、SpringCache
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+    <version>3.5.6</version>
+</dependency>
+```
+
+![image-20251006194402962](assets/image-20251006194402962.png)

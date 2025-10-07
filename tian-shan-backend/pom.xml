@@ -37,6 +37,7 @@
         <springdoc>2.8.9</springdoc>
         <redis>3.5.4</redis>
         <fastjson>2.0.10</fastjson>
+        <springcache>3.5.6</springcache>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -130,6 +131,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson}</version>
+            </dependency>
+
+            <!--SpringCache-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-cache</artifactId>
+                <version>${springcache}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

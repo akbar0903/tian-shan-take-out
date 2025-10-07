@@ -106,7 +106,6 @@ public class DishController {
     public Result<Void> startOrStop(@PathVariable("status") Integer status, Long id) {
         dishService.startOrStop(status, id);
 
-        // 清楚所有hall_categoryId的缓存
         clearCache("dish_*" );
         return Result.success();
     }

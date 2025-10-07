@@ -1,6 +1,6 @@
 @use 'normalize.css';
 @use 'variables' as *;
-@use "elplus-reset.scss";
+@use "./element/index.scss";
 
 *,
 *:before,

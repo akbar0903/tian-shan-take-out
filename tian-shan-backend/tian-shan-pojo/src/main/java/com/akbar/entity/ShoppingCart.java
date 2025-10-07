@@ -2,6 +2,9 @@ package com.akbar.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.time.LocalDateTime;
@@ -71,5 +74,6 @@ public class ShoppingCart implements Serializable {
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 }
