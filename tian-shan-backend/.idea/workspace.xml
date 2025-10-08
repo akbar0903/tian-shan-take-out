@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5468ca0a-c57c-4342-9cd4-4d54a6522f74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/dto/ShoppingCartDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/ShoppingCartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/ShoppingCartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/backend-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/backend-notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/TianShanApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/admin/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/styles/elplus-reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tian-shan-frontend/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../tian-shan-frontend/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/exception/DefaultAddressNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/controller/user/AddressBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/mapper/AddressBookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/AddressBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tian-shan-server/src/main/java/com/akbar/service/impl/AddressBookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-common/src/main/java/com/akbar/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/tian-shan-pojo/src/main/java/com/akbar/entity/AddressBook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,6 +64,8 @@
     "JUnit.CommonTest.generateRandomKeyTest.executor": "Run",
     "JUnit.HttpClientTest.testGet.executor": "Run",
     "JUnit.HttpClientTest.testPost.executor": "Run",
+    "Maven.tian-shan-backend [clean].executor": "Run",
+    "Maven.tian-shan-backend [compile].executor": "Run",
     "Maven.tian-shan-backend [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -190,7 +182,8 @@
       <workItem from="1759498230020" duration="1159000" />
       <workItem from="1759552391874" duration="15919000" />
       <workItem from="1759722814558" duration="24305000" />
-      <workItem from="1759827109211" duration="8870000" />
+      <workItem from="1759827109211" duration="10621000" />
+      <workItem from="1759890379961" duration="6542000" />
     </task>
     <servers />
   </component>

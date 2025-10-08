@@ -89,5 +89,5 @@ public class AddressBook implements Serializable {
     /**
      * 默认 0 否 1是
      */
-    private Boolean isDefault;
+    private Integer isDefault;
 }
