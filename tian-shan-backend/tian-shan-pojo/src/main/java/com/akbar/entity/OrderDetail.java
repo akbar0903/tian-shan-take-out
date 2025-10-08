@@ -27,7 +27,7 @@ public class OrderDetail implements Serializable {
     private Long id;
 
     /**
-     * 名字
+     * 商品名称
      */
     private String name;
 
