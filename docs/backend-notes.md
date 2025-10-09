@@ -218,3 +218,29 @@ Apache HttpClient是客户端去主动发 HTTP 请求的工具。
 ```
 
 ![image-20251006194402962](assets/image-20251006194402962.png)
+
+## 八、定时任务SpringTask
+
+**cron表达式：**
+
+<img src="assets/image-20251009084206525.png" alt="image-20251009084206525" style="zoom: 67%;" />
+
+**注意：**周和日不能同时出现。
+
+**cron表达式在线生成器：**https://cron.qqe2.com/
+
+
+
+依赖：
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+</dependency>
+```
+
+![image-20251009085845044](assets/image-20251009085845044.png)
+
+在spring-context中就有spring-task。
+
