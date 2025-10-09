@@ -1,17 +1,16 @@
 package com.akbar.controller.user;
 
+import com.akbar.dto.OrdersPaymentDTO;
 import com.akbar.dto.OrdersSubmitDTO;
 import com.akbar.result.Result;
 import com.akbar.service.OrdersService;
+import com.akbar.vo.OrderPaymentVO;
 import com.akbar.vo.OrdersSubmitVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController("userOrderController")
 @RequestMapping("/user/order")
@@ -32,5 +31,18 @@ public class OrdersController {
         log.info("用户下单：{}", ordersSubmitDTO);
         OrdersSubmitVO ordersSubmitVO = ordersService.submit(ordersSubmitDTO);
         return Result.success(ordersSubmitVO);
+    }
+
+
+    /**
+     * 订单支付
+     */
+    @PutMapping("/payment")
+    @Operation(summary = "订单支付")
+    public Result<OrderPaymentVO> payment(@RequestBody OrdersPaymentDTO ordersPaymentDTO) throws Exception {
+        log.info("订单支付：{}", ordersPaymentDTO);
+        OrderPaymentVO orderPaymentVO = ordersService.payment(ordersPaymentDTO);
+        log.info("生成预支付交易单：{}", orderPaymentVO);
+        return Result.success(orderPaymentVO);
     }
 }

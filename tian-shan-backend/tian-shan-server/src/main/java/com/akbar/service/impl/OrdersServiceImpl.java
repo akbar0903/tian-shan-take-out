@@ -2,6 +2,7 @@ package com.akbar.service.impl;
 
 import com.akbar.constant.MessageConstant;
 import com.akbar.context.BaseContext;
+import com.akbar.dto.OrdersPaymentDTO;
 import com.akbar.dto.OrdersSubmitDTO;
 import com.akbar.entity.AddressBook;
 import com.akbar.entity.OrderDetail;
@@ -14,7 +15,11 @@ import com.akbar.mapper.OrderDetailMapper;
 import com.akbar.mapper.OrdersMapper;
 import com.akbar.mapper.ShoppingCartMapper;
 import com.akbar.service.OrdersService;
+import com.akbar.vo.OrderPaymentVO;
 import com.akbar.vo.OrdersSubmitVO;
+import com.akbar.websocket.WebSocketServer;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.BeanUtils;
@@ -23,8 +28,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> implements OrdersService {
@@ -40,6 +44,9 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
 
     @Autowired
     private ShoppingCartMapper shoppingCartMapper;
+
+    @Autowired
+    private WebSocketServer webSocketServer;
 
 
     /**
@@ -101,5 +108,88 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
                 .orderAmount(orders.getAmount())
                 .orderTime(orders.getOrderTime())
                 .build();
+    }
+
+
+    /**
+     * 订单支付
+     */
+    @Override
+    public OrderPaymentVO payment(OrdersPaymentDTO ordersPaymentDTO) {
+        Long userId = BaseContext.getCurrentId();
+        String orderNumber = ordersPaymentDTO.getOrderNumber();
+
+        LambdaQueryWrapper<Orders> queryWrapper = new LambdaQueryWrapper<Orders>()
+                .eq(Orders::getNumber, orderNumber)
+                .eq(Orders::getUserId, userId);
+        Orders order = ordersMapper.selectOne(queryWrapper);
+
+        if (order == null) {
+            throw new RuntimeException("订单不存在");
+        }
+
+        // 如果订单已经支付，直接返回
+        if (order.getPayStatus() != null && order.getPayStatus() == Orders.PAID) {
+            throw new RuntimeException("订单已支付");
+        }
+
+        // ==========================
+        // 3. 模拟支付成功
+        // ==========================
+        // 实际项目这里是调用 weChatPayUtil.pay() 向微信下单
+        // 我们这里直接认为支付成功，然后走 paySuccess() 逻辑
+        paySuccess(orderNumber);
+
+        // ==========================
+        // 4. 返回模拟的支付信息（格式与真实微信支付保持一致）
+        // ==========================
+        // 生成模拟数据
+        String nonceStr = UUID.randomUUID().toString().replace("-", "");
+        String paySign = "mock_sign_" + System.currentTimeMillis();
+        String timeStamp = String.valueOf(System.currentTimeMillis() / 1000);
+        String packageStr = "prepay_id=mock_prepay_" + (int) (Math.random() * 1000000);
+        String signType = "RSA";
+
+        return OrderPaymentVO.builder()
+                .nonceStr(nonceStr)
+                .paySign(paySign)
+                .timeStamp(timeStamp)
+                .signType(signType)
+                .packageStr(packageStr)
+                .build();
+    }
+
+
+    /**
+     * 工具方法
+     * 支付成功后调用的方法（模拟微信支付回调）
+     */
+    public void paySuccess(String orderNumber) {
+        Long userId = BaseContext.getCurrentId();
+
+        // 根据订单号和用户ID查询订单
+        Orders order = ordersMapper.selectOne(
+                new LambdaQueryWrapper<Orders>()
+                       .eq(Orders::getNumber, orderNumber)
+                       .eq(Orders::getUserId, userId)
+        );
+        if (order == null) {
+            throw new RuntimeException("订单不存在");
+        }
+
+        // 更新订单的状态信息
+        order.setPayStatus(Orders.PAID);            // 支付状态：已支付
+        order.setStatus(Orders.TO_BE_CONFIRMED);    // 订单状态：待接单
+        order.setCheckoutTime(LocalDateTime.now()); // 订单完成时间
+        ordersMapper.updateById(order);
+
+        // 向后台管理端发送WebSocket通知
+        Map<String, Object> message = new HashMap<>();
+        message.put("type", 1);
+        message.put("orderId", order.getId());
+        message.put("content", "订单号：" + order.getNumber());
+
+        // 群发消息
+        webSocketServer.sendToAllClient(JSON.toJSONString(message));
     }
 }

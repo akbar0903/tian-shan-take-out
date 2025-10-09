@@ -244,3 +244,9 @@ Apache HttpClient是客户端去主动发 HTTP 请求的工具。
 
 在spring-context中就有spring-task。
 
+## 九、WebSocket
+
+![image-20251009100207536](assets/image-20251009100207536.png)
+
+maven坐标：
+
